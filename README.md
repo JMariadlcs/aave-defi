@@ -1,4 +1,4 @@
-# AAVE - DEFI ✅
+# AAVE - DEFI 👻
 
 This is a project for interacting programmatically with [Aave](https://aave.com/) from Patrick Alpha's Free Code Camp course.
 
