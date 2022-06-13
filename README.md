@@ -63,3 +63,71 @@ hardhat: {
 ```bash
 yarn hardhat run scripts/aaveBorrow.js
 ```
+
+## REMINDERS
+
+-   If you want to execute solhint to search for potential Solidity errors
+    Execute:
+
+```bash
+yarn solhint contracts/*.sol
+```
+
+-   If you want to use a text formarter:
+    Check [.prettierrc](https://github.com/JMariadlcs/aave-defi/blob/main/.prettierrc) and [.prettierignore](https://github.com/JMariadlcs/aave-defi/blob/main/.prettierignore).
+
+-   To automatically verify our contract on etherscan:
+
+```bash
+yarn add --dev @nomiclabs/hardhat-etherscan
+```
+
+Then, include inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
+
+```bash
+require("@nomiclabs/hardhat-etherscan");
+```
+
+Add `ETHERSCAN_API_KEY` inside `.env` file.
+
+-   Use Hardhat Gas Reporter:
+
+```bash
+yarn add --dev hardhat-gas-reporter
+```
+
+Then, include inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
+
+```bash
+require("hardhat-gas-reporter");
+```
+
+-   Use Solidity Coverage:
+
+```bash
+yarn add --dev solidity-coverage
+```
+
+Then, include inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
+
+```bash
+require("solidity-coverage");
+```
+
+In order to execute it:
+
+```bash
+yarn hardhat coverage
+```
+
+-   Use Hardhat Waffle:
+
+```bash
+yarn add @nomiclabs/hardhat-waffle
+```
+
+Then, include inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.jss):
+
+```bash
+require("@nomiclabs/hardhat-waffle");
+```
