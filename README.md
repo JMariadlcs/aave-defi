@@ -45,6 +45,12 @@ yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
 require("hardhat-deploy");
 ```
 
+-   Install Aave dependencies
+
+```bash
+yarn add --dev @aave/protocol-v2
+```
+
 ## HOW TO FORK MAINNET
 
 -   Inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
@@ -139,5 +145,5 @@ require("@nomiclabs/hardhat-waffle");
 -   [Aave](https://aave.com/)
 -   [Aave docs](https://docs.aave.com/hub/)
 -   [Aave developers docs v2](https://docs.aave.com/developers/v/2.0/)
--   [Aave Lending Pool](https://docs.aave.com/developers/v/2.0/the-core-protocol/lendingpool): protocol that we are going to interact with.
+-   [Aave Lending Pool](https://docs.aave.com/developers/v/2.0/the-core-protocol/addresses-provider/ilendingpooladdressesprovider): protocol that we are going to interact with.
 -   [Aave protocols contract addresses](https://docs.aave.com/developers/v/2.0/deployed-contracts/deployed-contracts)
