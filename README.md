@@ -1,6 +1,6 @@
 # AAVE - DEFI 👻
 
-This is a project for interacting programmatically with [Aave](https://aave.com/) from Patrick Alpha's Free Code Camp course.
+This is a project for interacting programmatically with [Aave](https://aave.com/) on a Forked Mainnet from Patrick Alpha's Free Code Camp course.
 
 The workshop followed to complete this repo is [this one](https://github.com/PatrickAlphaC/hardhat-defi-fcc).
 
@@ -8,13 +8,14 @@ The repo that we are going to implement is like [this one](https://www.youtube.c
 
 ## PROJECT
 
-Some scripts are created in this project to interact programmatically with [Aave](https://aave.com/)
+Some scripts are created in this project to interact programmatically with [Aave](https://aave.com/) on a Forked Mainnet.
 
 Objetives:
 
 1. Deposit collateral: ETH/WETH ✅.
 2. Borrow another asset: DAI ✅.
 3. Repay the borrowed DAI back ✅.
+4. Fork Mainnet to test the scripts ✅.
 
 ## CREATE SIMILAR PROJECT FROM SCRATCH
 
@@ -38,8 +39,27 @@ yarn add --dev @nomiclabs/hardhat-waffle@^2.0.0 ethereum-waffle@^3.0.0 chai@^4.2
 yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
 ```
 
--   Include the following like inside [hardhat.config.js](https://github.com/JMariadlcs/fund-me-dapp/blob/main/hardhat.config.js):
+-   Include the following like inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
 
 ```bash
 require("hardhat-deploy");
+```
+
+## HOW TO FORK MAINNET
+
+-   Inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi/blob/main/hardhat.config.js):
+
+```bash
+hardhat: {
+          chainId: 31337,
+          forking: {
+              url: MAINNET_RPC_URL,
+          },
+      },
+```
+
+-   Execute scripts on forked chain:
+
+```bash
+yarn hardhat run scripts/aaveBorrow.js
 ```
