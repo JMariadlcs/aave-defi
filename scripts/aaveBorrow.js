@@ -10,6 +10,9 @@ const { getWeth } = require("../scripts/getWeth")
 async function main() {
     // This protocol treats everything as an ERC-20 token. (eg. converts ETH -> wETH).
     await getWeth()
+    const { deployer } = await getNamedAccounts()
+
+    // To interact with Aave Protocol -> ABI, contractAddress
 
 }
 

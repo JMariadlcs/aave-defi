@@ -131,3 +131,13 @@ Then, include inside [hardhat.config.js](https://github.com/JMariadlcs/aave-defi
 ```bash
 require("@nomiclabs/hardhat-waffle");
 ```
+
+## Resources
+
+-   [wETH Rinkeby](https://rinkeby.etherscan.io/token/0xc778417e063141139fce010982780140aa0cd5ab): Rinkeby wETH Smart Contract.
+-   [wETH Mainnet](https://rinkeby.etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2): Mainnet wETH Smart Contract.
+-   [Aave](https://aave.com/)
+-   [Aave docs](https://docs.aave.com/hub/)
+-   [Aave developers docs v2](https://docs.aave.com/developers/v/2.0/)
+-   [Aave Lending Pool](https://docs.aave.com/developers/v/2.0/the-core-protocol/lendingpool): protocol that we are going to interact with.
+-   [Aave protocols contract addresses](https://docs.aave.com/developers/v/2.0/deployed-contracts/deployed-contracts)
