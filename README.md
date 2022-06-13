@@ -1,6 +1,6 @@
 # AAVE - DEFI 👻
 
-This is a project for interacting programmatically with [Aave](https://aave.com/) on a Forked Mainnet from Patrick Alpha's Free Code Camp course.
+This is a project for interacting programmatically with [Aave](https://aave.com/) on a Forked Mainnet and using Chainlink Price Feeds from Patrick Alpha's Free Code Camp course.
 
 The workshop followed to complete this repo is [this one](https://github.com/PatrickAlphaC/hardhat-defi-fcc).
 
@@ -8,7 +8,7 @@ The repo that we are going to implement is like [this one](https://www.youtube.c
 
 ## PROJECT
 
-Some scripts are created in this project to interact programmatically with [Aave](https://aave.com/) on a Forked Mainnet.
+Some scripts are created in this project to interact programmatically with [Aave](https://aave.com/) on a Forked Mainnet with the help of Chainlink Price Feeds.
 
 Objetives:
 
@@ -49,6 +49,13 @@ require("hardhat-deploy");
 
 ```bash
 yarn add --dev @aave/protocol-v2
+```
+
+-   Inside [ILendingPool.sol](https://github.com/JMariadlcs/aave-defi/blob/main/contracts/interfaces/ILendingPool.sol) insert:
+
+```bash
+import {ILendingPoolAddressesProvider} from "@aave/protocol-v2/contracts/interfaces/ILendingPoolAddressesProvider.sol";
+import {DataTypes} from "@aave/protocol-v2/contracts/protocol/libraries/types/DataTypes.sol";
 ```
 
 ## HOW TO FORK MAINNET
